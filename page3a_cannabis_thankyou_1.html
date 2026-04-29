@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Score Is On Its Way — Gaines 4 The Culture LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#2C5545;--sage-mid:#3D7A60;--sage-light:#EAF2EC;--sage-pale:#F4F9F5;--gold:#B8892A;--gold-mid:#D4A843;--gold-light:#F5E8C4;--gold-pale:#FDF9EE;--ink:#181818;--ink-mid:#3A3A3A;--ink-soft:#6B6B6B;--cream:#F9F6F0;--white:#FFFFFF;--rule:rgba(28,28,28,0.10);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif;--mono:'Space Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes checkDraw{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+
+.confirm-bar{background:var(--sage);padding:14px 5vw;display:flex;align-items:center;justify-content:space-between}
+.confirm-bar .cb-brand{font-family:var(--serif);font-size:16px;color:var(--white);font-weight:400}
+.confirm-bar .cb-tag{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light)}
+
+.hero-confirm{padding:80px 5vw 60px;max-width:700px;margin:0 auto;text-align:center;animation:fadeUp .7s ease both}
+.check-circle{width:70px;height:70px;border-radius:50%;background:var(--sage-light);border:2px solid var(--sage);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.check-circle svg{width:32px;height:32px}
+.check-circle svg path{stroke:var(--sage);stroke-width:2.5;stroke-dasharray:60;stroke-dashoffset:60;animation:checkDraw .6s .3s ease forwards;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-confirm .eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.20em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.hero-confirm h1{font-family:var(--serif);font-size:clamp(32px,4vw,54px);font-weight:300;color:var(--ink);line-height:1.15;margin-bottom:18px}
+.hero-confirm h1 em{font-style:italic;color:var(--sage-mid)}
+.hero-confirm p{font-size:15px;font-weight:300;color:var(--ink-mid);line-height:1.75;max-width:520px;margin:0 auto 12px}
+
+.what-happens{background:var(--white);border:1px solid var(--rule);padding:32px;max-width:700px;margin:32px auto;animation:fadeUp .7s .2s ease both}
+.wh-label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:20px}
+.wh-steps{display:flex;flex-direction:column;gap:0}
+.wh-step{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:flex-start}
+.wh-step:last-child{border-bottom:none}
+.wh-num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gold);min-width:24px;padding-top:2px}
+.wh-content h4{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.wh-content p{font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.55}
+
+.cta-block{max-width:700px;margin:0 auto 60px;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 5vw;animation:fadeUp .7s .35s ease both}
+.cta-card{padding:28px;border:1px solid var(--rule);background:var(--white);display:flex;flex-direction:column;gap:12px}
+.cta-card.featured{border-color:var(--sage);background:var(--sage-pale)}
+.cta-card .cc-label{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.cta-card.featured .cc-label{color:var(--sage)}
+.cta-card h3{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);line-height:1.2}
+.cta-card p{font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.6}
+.cta-card .price{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--sage)}
+.btn-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;text-decoration:none;transition:all .2s;border:1.5px solid;align-self:flex-start}
+.btn-cta.primary{background:var(--sage);color:var(--white);border-color:var(--sage)}
+.btn-cta.primary:hover{background:transparent;color:var(--sage)}
+.btn-cta.outline{background:transparent;color:var(--sage);border-color:var(--sage)}
+.btn-cta.outline:hover{background:var(--sage);color:var(--white)}
+
+.snapshot-detail{max-width:700px;margin:0 auto 40px;padding:0 5vw;animation:fadeUp .7s .45s ease both}
+.sd-card{background:var(--gold-pale);border:1px solid rgba(184,137,42,.25);padding:28px}
+.sd-label{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.sd-card h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:12px}
+.sd-includes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.sd-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:300;color:var(--ink-mid);line-height:1.5}
+.sd-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+.cbaf-note{background:var(--sage-light);border-left:3px solid var(--sage);padding:12px 16px;font-size:12px;font-weight:300;color:var(--sage);line-height:1.6;margin-bottom:18px}
+.cbaf-note strong{font-weight:500}
+.btn-pay{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--white);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:15px 28px;text-decoration:none;border:1.5px solid var(--gold);transition:all .2s}
+.btn-pay:hover{background:transparent;color:var(--gold)}
+
+footer{background:var(--ink);padding:32px 5vw;margin-top:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fl-name{font-family:var(--serif);font-size:15px;color:var(--white)}
+.fl-creds{font-family:var(--mono);font-size:9px;color:var(--gold);letter-spacing:.06em;line-height:1.8}
+.fr{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.25);letter-spacing:.06em}
+
+@media(max-width:620px){.cta-block{grid-template-columns:1fr}.sd-includes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="confirm-bar">
+  <img src="https://assets.cdn.filesafe.space/2fl3hkOM4QQnDOcFNHcW/media/6902f9285170a50e55155e6f.webp" alt="Gaines 4 The Culture LLC" style="height:32px;width:auto;display:block;filter:brightness(0) invert(1)" loading="lazy">
+  <div class="cb-tag">Cannabis Advisory</div>
+</div>
+
+<div class="hero-confirm">
+  <div class="check-circle">
+    <svg viewBox="0 0 32 32"><path d="M6 16l8 8 12-14"/></svg>
+  </div>
+  <div class="eyebrow">Intake Complete</div>
+  <h1>Your Fundability Score<br>is <em>on its way.</em></h1>
+  <p>Check your inbox in the next few minutes. Your score will tell you exactly where you stand across the financial and compliance areas that MCA regulators and funders check first.</p>
+  <p style="font-size:13px;margin-top:4px">Did not receive it? Check your spam folder, or email <a href="mailto:gaines4theculturellc@gmail.com" style="color:var(--sage)">gaines4theculturellc@gmail.com</a>.</p>
+</div>
+
+<div class="what-happens" style="padding:32px 5vw">
+  <div style="max-width:640px;margin:0 auto">
+    <div class="wh-label">What happens next</div>
+    <div class="wh-steps">
+      <div class="wh-step"><div class="wh-num">Now</div><div class="wh-content"><h4>Score email arrives</h4><p>Your Fundability Score and a plain-language breakdown of what it means for your next funding round or MCA inspection.</p></div></div>
+      <div class="wh-step"><div class="wh-num">Day 1</div><div class="wh-content"><h4>Compliance Calendar delivered</h4><p>Your Maryland Cannabis Compliance Calendar — 9 milestones, 24 months — arrives with context on which stage you are likely in and what documentation to prioritize.</p></div></div>
+      <div class="wh-step"><div class="wh-num">Day 3</div><div class="wh-content"><h4>One question from me</h4><p>I will follow up with a single, specific question about your biggest sticking point. Your answer lets me point you to the right next step — no generic sequence, no sales pressure.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div class="cta-card featured">
+    <div class="cc-label">Recommended next step</div>
+    <h3>Book a 20-minute Clarity Call</h3>
+    <p>We go over your score together. You leave knowing exactly what to address first, what funders will look at, and whether the Fundability Snapshot is the right immediate move.</p>
+    <a href="https://calendly.com/gaines4theculturellc/30min" class="btn-cta primary">Book My Clarity Call →</a>
+  </div>
+  <div class="cta-card">
+    <div class="cc-label">Ready to start now</div>
+    <h3>Fundability Snapshot™</h3>
+    <p>One clear report. Your financial health ratios, spending review, tax readiness, and a customized funding checklist — delivered within 7 days.</p>
+    <div class="price">From $197</div>
+    <a href="https://calendly.com/gaines4theculturellc/30min" class="btn-cta outline">Start the Snapshot →</a>
+  </div>
+</div>
+
+<div class="snapshot-detail">
+  <div class="sd-card">
+    <div class="sd-label">What the Fundability Snapshot includes</div>
+    <h3>Fundability Snapshot™ — starting at $197</h3>
+    <div class="sd-includes">
+      <div class="sd-item">Financial health ratios reviewed</div>
+      <div class="sd-item">Tax return readiness assessment</div>
+      <div class="sd-item">Spending analysis — how you look from outside</div>
+      <div class="sd-item">KPIs for grant and loan readiness</div>
+      <div class="sd-item">Funding readiness checklist — customized</div>
+      <div class="sd-item">Alignment between financials and tax returns</div>
+    </div>
+    <div class="cbaf-note"><strong>CBAF grant holders:</strong> Professional advisory services including the Fundability Snapshot are eligible uses of Cannabis Business Assistance Fund grant dollars. Ask me how to document this correctly so the funds flow compliantly.</div>
+    <a href="https://calendly.com/gaines4theculturellc/30min" class="btn-pay">Book and Secure My Snapshot →</a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="fl-name">Gaines 4 The Culture LLC</div>
+    <div class="fl-creds">NACAT Certified Cannabis Seed Counter · NACVA Member · NATP Member · MCBA Ally · Freedom Grow Sponsor</div>
+  </div>
+  <div class="fr">Maryland · gaines4theculturellc@gmail.com</div>
+</footer>
+</body>
+</html>
